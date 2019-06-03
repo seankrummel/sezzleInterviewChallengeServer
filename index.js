@@ -11,6 +11,8 @@ mongoose.Promise = global.Promise;
 const app = express();
 app.use(bodyParser.json());
 app.use(cors({origin: CLIENT_ORIGIN})); // <- this isn't working when I deploy?
+console.log(CLIENT_ORIGIN);
+// app.use(cors);
 // app.use(function(req, res, next) {
 //   res.header('Access-Control-Allow-Origin', '*');
 //   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
