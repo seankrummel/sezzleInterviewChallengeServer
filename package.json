@@ -1,7 +1,7 @@
 {
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodes index.js",
     "heroku": "node index.js"
   },
   "dependencies": {
