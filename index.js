@@ -9,8 +9,13 @@ const {PORT, CLIENT_ORIGIN, DATABASE_URL} = require('./config');
 
 mongoose.Promise = global.Promise;
 const app = express();
-app.use(cors({origin: CLIENT_ORIGIN}));
+app.use(cors({origin: CLIENT_ORIGIN})); // <- this isn't working when I deploy?
 app.use(bodyParser.json());
+// app.use(function(req, res, next) {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+// });
+
 
 app.get('/', (req, res, next) => {
   Log.findOne().then(log => {
