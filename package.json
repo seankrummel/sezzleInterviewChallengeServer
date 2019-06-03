@@ -1,7 +1,8 @@
 {
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "heroku": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
