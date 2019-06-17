@@ -35,10 +35,10 @@ app.post('/', (req, res, next) => {
     let logs;
     if (log.logs.length === 10) {
       logs = log.logs.slice(0, 9);
-      logs.push(equ);
+      logs.unshift(equ);
     }
     else {
-      log.logs.push(equ);
+      log.logs.unshift(equ);
       logs = [...log.logs];
     }
     return Log.findOneAndUpdate({logs});
